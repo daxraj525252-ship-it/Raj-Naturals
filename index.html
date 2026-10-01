@@ -113,6 +113,49 @@ footer .brand{color:#fff;margin-bottom:10px}
 .float svg{width:34px;height:34px;fill:#fff}
 :focus-visible{outline:3px solid var(--au);outline-offset:2px}
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-delay:0s!important;scroll-behavior:auto!important}}
+/* ===== MOBILE-ONLY REDESIGN ===== */
+html{scroll-padding-top:68px}
+body{font-size:16px;padding-bottom:84px}
+html[lang=gu] body{line-height:1.85}
+.wrap{max-width:560px;padding:0 16px}
+section{padding:40px 0}
+h2{font-size:1.45rem}
+.nav{height:64px;gap:8px}
+.brand{font-size:1.05rem}
+.links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--c);padding:12px 16px;gap:0;border-bottom:1px solid #e6dfcc;margin:0;font-size:1rem}
+.links.open{display:flex}
+.links a{padding:14px 4px;border-bottom:1px solid #eee6d2}
+.nav>.wa{display:none}
+.burger{display:block;margin-left:0;font-size:1.8rem;min-width:44px;min-height:44px}
+.brand{margin-right:auto}
+.hero{padding:28px 0 36px;text-align:center}
+.hero .wrap{grid-template-columns:1fr;gap:18px}
+.seal{order:-1;width:120px;padding:10px;justify-self:center}
+.seal b{font-size:1.9rem}.seal span{font-size:.62rem;display:block;line-height:1.3}
+.hero h1{font-size:1.55rem}
+.hero p{margin:0 auto 20px}
+.cta{flex-direction:column}
+.btn{min-height:52px;justify-content:center;width:100%;font-size:1rem}
+.lang button{min-height:36px;min-width:42px}
+.grid{grid-template-columns:1fr;gap:16px}
+.card{display:grid;grid-template-columns:1fr auto;align-items:center;gap:2px 12px;padding:18px}
+.rib{position:static;grid-column:1/-1;justify-self:start;border-radius:8px;margin-bottom:8px}
+.card h3{grid-column:1;grid-row:2;font-size:1.1rem}
+.price{grid-column:2;grid-row:2;margin:0;font-size:2.2rem}
+.card>:not(.rib):not(h3):not(.price){grid-column:1/-1}
+.get{margin-top:10px;font-size:1.05rem}
+.card .btn{margin-top:4px}
+.two{grid-template-columns:1fr;gap:24px}
+.ben{grid-template-columns:1fr;gap:12px}
+.ben div{display:grid;grid-template-columns:48px 1fr;column-gap:12px;padding:16px}
+.ben .ic{grid-row:1/3;align-self:center;font-size:2rem}
+.ben h3{margin:0}
+.steps{grid-template-columns:1fr}
+.step{display:flex;align-items:center;gap:14px;text-align:left;padding:14px}
+.step b{margin:0;flex:none}
+.big,.badge{font-size:.95rem}
+footer .grid{gap:20px}
+.float{width:58px;height:58px;right:14px;bottom:16px}
 </style>
 </head>
 <body>
@@ -166,9 +209,9 @@ footer .brand{color:#fff;margin-bottom:10px}
 <section id="products">
  <div class="wrap">
   <h2 data-i="ph">Products &amp; Combos</h2>
-  <p class="sub" data-i="ps">Pure Moringa Leaf Powder in 10g sachets. Pick a combo, tap the button, and your order message is ready on WhatsApp.</p>
+  <p class="sub" data-i="ps">Pure Moringa Leaf Powder in 10g packets. Pick a combo, tap the button, and your order message is ready on WhatsApp.</p>
   <div class="grid" id="combos"></div>
-  <p class="note" data-i="pn">Price is for the whole pack. The FREE sachet is already included in the total.</p>
+  <p class="note" data-i="pn">Price is for the whole pack. The FREE packet is already included in the total.</p>
  </div>
 </section>
 
@@ -251,26 +294,26 @@ const PH="919408154570";
 const I={
 en:{n1:"Home",n2:"About Us",n3:"Products & Combos",n4:"Health Benefits",n5:"FSSAI & Quality",n6:"Contact Us",cta:"Order via WhatsApp",
 tag:"Nature's Purest Gift for Your Daily Health & Energy",h1:"Pure Organic Moringa Powder – Boost Your Immunity & Vitality Naturally!",hp:"100% Natural, Hygienically Processed & FSSAI Certified. Free Home Delivery in Bhavnagar!",b1:"Explore Offers",b2:"WhatsApp Order Now",seal:"Natural Moringa Leaf Powder",
-ph:"Products & Combos",ps:"Pure Moringa Leaf Powder in 10g sachets. Pick a combo, tap the button, and your order message is ready on WhatsApp.",pn:"Price is for the whole pack. The FREE sachet is already included in the total.",
+ph:"Products & Combos",ps:"Pure Moringa Leaf Powder in 10g packets. Pick a combo, tap the button, and your order message is ready on WhatsApp.",pn:"Price is for the whole pack. The FREE packet is already included in the total.",
 ah:"About Raj Naturals",ap:"We select fresh moringa leaves, dry them gently, and grind them into fine powder in a clean, hygienic unit in Bhavnagar. Nothing is added. You get the pure goodness of the leaf, packed in a zip-lock pouch to keep it fresh.",
 lic:"FSSAI Lic. No:",lic2:"FSSAI Lic. No:",lic3:"FSSAI Lic. No:",a1:"100% pure & sattvic",a2:"Rich in vitamins, minerals and antioxidants",a3:"FSSAI-certified processing",a4:"Hygienic zip-lock pouch packaging",
 bh:"Health Benefits of Moringa",c1t:"Natural Energy",c1:"Stay active all day without feeling tired.",c2t:"Immunity & Metabolism",c2:"Supports your body's natural defence and digestion.",c3t:"Iron, Calcium & Amino Acids",c3:"Essential nutrients for strong blood and bones.",c4t:"Healthy Skin & Hair",c4:"Nourishes from within for a natural glow.",
 qh:"FSSAI & Quality",qp:"Raj Naturals is a registered food business. Every batch is processed and packed following food safety standards.",
 dh:"Free Home Delivery across Bhavnagar City",s1:"Select Combo",s2:"Click WhatsApp",s3:"Get Delivered",
 ft:"Pure organic moringa leaf powder.",fo:"Follow us",rights:"All rights reserved.",
-nat:"100% Natural",skip:"Skip",pack:"Pack",get:"You get",pk:"sachets of 10g",free:"1 FREE sachet included",btn:"Order on WhatsApp",ribbon:"FREE",best:"Best value",
-msg:(n,p,t)=>`Hello Raj Naturals, I want to order the ${n} (₹${p}) – ${t} sachets of 10g. Please confirm my order.`,def:"Hello Raj Naturals, I want to order Moringa Powder"},
+nat:"100% Natural",skip:"Skip",pack:"Pack",get:"You get",pk:"packets of 10g",free:"1 FREE packet included",btn:"Order on WhatsApp",ribbon:"FREE",best:"Best value",
+msg:(n,p,t)=>`Hello Raj Naturals, I want to order the ${n} (₹${p}) – ${t} packets of 10g. Please confirm my order.`,def:"Hello Raj Naturals, I want to order Moringa Powder"},
 gu:{n1:"હોમ",n2:"અમારા વિશે",n3:"પ્રોડક્ટ્સ અને કોમ્બો",n4:"સ્વાસ્થ્ય લાભ",n5:"FSSAI અને ગુણવત્તા",n6:"સંપર્ક કરો",cta:"WhatsApp પર ઓર્ડર કરો",
 tag:"તમારા રોજિંદા સ્વાસ્થ્ય અને ઊર્જા માટે કુદરતની શુદ્ધ ભેટ",h1:"શુદ્ધ ઓર્ગેનિક મોરિંગા પાવડર – કુદરતી રીતે વધારો રોગપ્રતિકારક શક્તિ અને સ્ફૂર્તિ!",hp:"100% કુદરતી, સ્વચ્છ રીતે પ્રોસેસ કરેલ અને FSSAI પ્રમાણિત. ભાવનગરમાં ઘરે ફ્રી ડિલિવરી!",b1:"ઓફર્સ જુઓ",b2:"WhatsApp ઓર્ડર કરો",seal:"કુદરતી મોરિંગા લીફ પાવડર",
-ph:"પ્રોડક્ટ્સ અને કોમ્બો",ps:"10 ગ્રામ સેશેમાં શુદ્ધ મોરિંગા લીફ પાવડર. કોમ્બો પસંદ કરો, બટન દબાવો, અને ઓર્ડરનો મેસેજ WhatsApp પર તૈયાર.",pn:"કિંમત આખા પેકની છે. ફ્રી સેશે કુલ સંખ્યામાં પહેલેથી શામેલ છે.",
+ph:"પ્રોડક્ટ્સ અને કોમ્બો",ps:"10 ગ્રામ પેકેટમાં શુદ્ધ મોરિંગા લીફ પાવડર. કોમ્બો પસંદ કરો, બટન દબાવો, અને ઓર્ડરનો મેસેજ WhatsApp પર તૈયાર.",pn:"કિંમત આખા પેકની છે. ફ્રી પેકેટ કુલ સંખ્યામાં પહેલેથી શામેલ છે.",
 ah:"રાજ નેચરલ્સ વિશે",ap:"અમે તાજાં મોરિંગાના પાન પસંદ કરી, હળવેથી સૂકવી, ભાવનગરના સ્વચ્છ યુનિટમાં બારીક પાવડર બનાવીએ છીએ. કોઈ ભેળસેળ નહીં. તાજગી જળવાય એ માટે ઝિપ-લોક પાઉચમાં પેકિંગ.",
 lic:"FSSAI લાઇસન્સ નં:",lic2:"FSSAI લાઇસન્સ નં:",lic3:"FSSAI લાઇસન્સ નં:",a1:"100% શુદ્ધ અને સાત્ત્વિક",a2:"વિટામિન, ખનીજ અને એન્ટીઑક્સિડન્ટથી ભરપૂર",a3:"FSSAI પ્રમાણિત પ્રોસેસિંગ",a4:"સ્વચ્છ ઝિપ-લોક પાઉચ પેકિંગ",
 bh:"મોરિંગાના સ્વાસ્થ્ય લાભ",c1t:"કુદરતી ઊર્જા",c1:"આખો દિવસ થાક્યા વગર સ્ફૂર્તિલા રહો.",c2t:"રોગપ્રતિકારક શક્તિ અને મેટાબોલિઝમ",c2:"શરીરની કુદરતી સુરક્ષા અને પાચનને સપોર્ટ.",c3t:"આયર્ન, કેલ્શિયમ અને એમિનો એસિડ",c3:"મજબૂત લોહી અને હાડકાં માટે જરૂરી પોષક તત્વો.",c4t:"સ્વસ્થ ત્વચા અને વાળ",c4:"અંદરથી પોષણ આપી કુદરતી ચમક લાવે.",
 qh:"FSSAI અને ગુણવત્તા",qp:"રાજ નેચરલ્સ નોંધાયેલો ફૂડ બિઝનેસ છે. દરેક બેચ ફૂડ સેફ્ટીના ધોરણો મુજબ પ્રોસેસ અને પેક થાય છે.",
 dh:"આખા ભાવનગર શહેરમાં ઘરે ફ્રી ડિલિવરી",s1:"કોમ્બો પસંદ કરો",s2:"WhatsApp દબાવો",s3:"ઘરે મેળવો",
 ft:"શુદ્ધ ઓર્ગેનિક મોરિંગા લીફ પાવડર.",fo:"અમને ફોલો કરો",rights:"બધા હકો સ્વાધીન.",
-nat:"100% કુદરતી",skip:"છોડો",pack:"પેક",get:"તમને મળશે",pk:"સેશે (10 ગ્રામ)",free:"1 સેશે ફ્રી શામેલ",btn:"WhatsApp પર ઓર્ડર કરો",ribbon:"ફ્રી",best:"સૌથી વધુ બચત",
-msg:(n,p,t)=>`નમસ્તે રાજ નેચરલ્સ, મારે ${n} (₹${p}) – ${t} સેશે (10 ગ્રામ) ઓર્ડર કરવું છે. કૃપા કરીને મારો ઓર્ડર કન્ફર્મ કરો.`,def:"નમસ્તે રાજ નેચરલ્સ, મારે મોરિંગા પાવડર ઓર્ડર કરવો છે"}};
+nat:"100% કુદરતી",skip:"છોડો",pack:"પેક",get:"તમને મળશે",pk:"પેકેટ (10 ગ્રામ)",free:"1 પેકેટ ફ્રી શામેલ",btn:"WhatsApp પર ઓર્ડર કરો",ribbon:"ફ્રી",best:"સૌથી વધુ બચત",
+msg:(n,p,t)=>`નમસ્તે રાજ નેચરલ્સ, મારે ${n} (₹${p}) – ${t} પેકેટ (10 ગ્રામ) ઓર્ડર કરવું છે. કૃપા કરીને મારો ઓર્ડર કન્ફર્મ કરો.`,def:"નમસ્તે રાજ નેચરલ્સ, મારે મોરિંગા પાવડર ઓર્ડર કરવો છે"}};
 const C=[
 {en:"Trial Pack",gu:"ટ્રાયલ પેક",p:39,b:4},
 {en:"Energy Combo",gu:"એનર્જી કોમ્બો",p:59,b:6},
